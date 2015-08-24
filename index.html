@@ -2,39 +2,54 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/journal/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
     <title>War</title>
   </head>
 
   <body>
-    <button class="btn" id="newGame">New Game</button>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Welcome to War!</h1>
+        <p>Press the button below to start a new game</p>
+        <button class="btn btn-lg btn-info" id="newGame">New Game</button>
+      </div>
+    </div>
+    <div class="alert alert-success" role="alert">
+      <span id="winner"></span> <a href="#" class="alert-link">Play again</a>
+    </div>
     <div id="board">
-      <div class="container">
-        <div class="panel panel-default" id="playerOne">
-          <div class="panel-heading">
-            <h3 class="panel-title">Player One</h3>
-          </div>
-          <div class="panel-body">
-            <image id="cardOne">
-          </div>
-          <div class="panel-footer">
-            Score: <span id="score1"></span>
+      <div class="container-fluid">
+        <div class="col-md-5 col-xs-5">
+          <div class="panel panel-default" id="playerOne">
+            <div class="panel-heading">
+              <h3 class="panel-title">Player One</h3>
+            </div>
+            <div class="panel-body">
+              <image id="cardOne"></image>
+            </div>
+            <div class="panel-footer">
+              Score: <span id="score1"></span>
+            </div>
           </div>
         </div>
-        <div class="panel panel-default" id="playerTwo">
-          <div class="panel-heading">
-            <h3 class="panel-title">Player Two</h3>
-          </div>
-          <div class="panel-body">
-            <image id="cardTwo">
-          </div>
-          <div class="panel-footer">
-            Score: <span id="score2"></span>
+        <div class="col-md-2 col-xs-2" id="button">
+          <button class="btn btn-primary btn-block" id="draw">Draw</button>
+        </div>
+        <div class="col-md-5 col-xs-5">
+          <div class="panel panel-default" id="playerTwo">
+            <div class="panel-heading">
+              <h3 class="panel-title">Player Two</h3>
+            </div>
+            <div class="panel-body">
+              <image id="cardTwo"></image>
+            </div>
+            <div class="panel-footer">
+              Score: <span id="score2"></span>
+            </div>
           </div>
         </div>
       </div>
-      <button class="btn" id="draw">Draw</button>
     </div>
   </body>
 

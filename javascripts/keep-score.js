@@ -16,6 +16,10 @@ define(function(require) {
     },
     getScoreTwo: function() {
       return score2;
+    },
+    resetScore: function() {
+      score1 = 0;
+      score2 = 0;
     }
   };
 });
