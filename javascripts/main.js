@@ -17,6 +17,6 @@ requirejs.config({
   }
 });
 
-requirejs([], function() {
+requirejs(["dependencies", "get-deck", "start-game"], function(dependencies, getDeck, startGame) {
 
 });
