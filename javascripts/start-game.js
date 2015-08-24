@@ -18,7 +18,11 @@ define(function(require) {
   });
 
   return {
-    deckOne: deckId1,
-    deckTwo: deckId2
+    getDeckOne: function() {
+      return deckId1;
+    },
+    getDeckTwo: function() {
+      return deckId2;
+    }
   };
 });
