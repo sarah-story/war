@@ -1,0 +1,100 @@
+body {
+  display: none;
+  background: url(../bgTop.jpg);
+  color: white; }
+
+.start {
+  color: #41C3AC; }
+
+#war {
+  font-family: 'Lobster', cursive;
+  font-size: 5em; }
+
+#winningPlayer {
+  font-family: 'Lobster', cursive;
+  font-size: 3em; }
+
+#shuffling {
+  font-family: 'Lobster', cursive;
+  font-size: 5em; }
+
+.cardOne {
+  float: left;
+  font-family: 'Lobster', cursive;
+  display: inline-block;
+  text-align: center;
+  font-size: 3em; }
+
+.cardTwo {
+  float: right;
+  font-family: 'Lobster', cursive;
+  display: inline-block;
+  text-align: center;
+  font-size: 3em; }
+
+.whoWon {
+  font-family: 'Lobster', cursive;
+  font-size: 2em; }
+
+.cardOne .oneWins, .cardTwo .twoWins {
+  opacity: 0; }
+
+.cards {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+#newGame, .winText, #winner {
+  text-align: center;
+  font-weight: bold;
+  font-size: 3em; }
+
+#shuffling {
+  text-align: center;
+  font-weight: bold; }
+
+#playAgain {
+  background: #41C3AC;
+  width: 50%;
+  font-weight: bold;
+  font-size: 1.25em; }
+
+.shuffloader {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%); }
+
+.card {
+  background: #41C3AC;
+  display: block;
+  float: left;
+  height: 20px;
+  width: 13px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 2px;
+  position: relative; }
+  .card:nth-child(1) {
+    animation: shuffle 1s infinite; }
+  .card:nth-child(2) {
+    animation: move 1s infinite; }
+  .card:nth-child(3) {
+    animation: move 1s infinite; }
+
+@keyframes shuffle {
+  50% {
+    opacity: .25;
+    transform: scale(0.9); }
+  75% {
+    opacity: .25;
+    transform: scale(0.9);
+    transform: translateX(46px); }
+  100% {
+    opacity: 1;
+    transform: translateX(46px); } }
+@keyframes move {
+  100% {
+    transform: translateX(-23px); } }
+
+/*# sourceMappingURL=main.css.map */
