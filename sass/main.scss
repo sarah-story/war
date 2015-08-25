@@ -1,28 +1,104 @@
-.panel-body {
+body {
+  display: none;
+  background: #2C3E50;
+  color: white;
+}
+
+.cardOne {
+  float: left;
+  display: inline-block;
   text-align: center;
-  height: 350px;
+  font-size: 2em;
+  font-weight: bold;
 }
 
-#draw {
-  width: 100%;
-  margin-top: 200px;
+.cardTwo {
+  float: right;
+  display: inline-block;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
 }
 
-#button {
-  vertical-align: middle;
-  margin-bottom: 20px;
-  height: 430px;
+.cardOne .oneWins, .cardTwo .twoWins {
+  opacity: 0;
 }
 
-#board {
-  display: none;
-  margin-top: 30px;
+.cards {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.container > .jumbotron {
-  margin-top: 100px;
+#newGame, .winText {
+  text-align: center;
+  font-weight: bold;
+  font-size: 3em;
 }
 
-.alert {
-  display: none;
+#shuffling {
+  text-align: center;
+  font-weight: bold;
+  font-size: 3em;
+}
+
+$card-width: 13px;
+$card-gutter: 10px;
+$card-height: 20px;
+$animation-speed: 1s;
+
+.shuffloader {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.card {
+  background: #18BC9C;
+  display: block;
+  float: left;
+  height: $card-height;
+  width: $card-width;
+  margin-left: ($card-gutter / 2);
+  margin-right: ($card-gutter / 2);
+  border-radius: 2px;
+  position: relative;
+  
+  &:nth-child(1) {
+    animation: shuffle $animation-speed infinite;
+  }
+  
+  &:nth-child(2) {
+    animation: move $animation-speed infinite;
+  }
+  
+  &:nth-child(3) {
+    animation: move $animation-speed infinite;
+  }
+ 
+}
+
+@keyframes shuffle {
+  50% {
+    opacity: .25;
+    transform: scale(.9);
+  }
+  
+  75% {
+    opacity: .25;
+    transform: scale(.9);
+    transform: translateX(($card-width + $card-gutter) * 2);
+  }
+  
+  100% {
+    opacity: 1;
+    transform: translateX(($card-width + $card-gutter) * 2);
+  }
+}
+
+@keyframes move {
+  100% {
+    transform: translateX(-($card-width + $card-gutter));
+  }
 }

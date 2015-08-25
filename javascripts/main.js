@@ -7,7 +7,8 @@ requirejs.config({
     'firebase': '../lib/bower_components/firebase/firebase',
     'lodash': '../lib/bower_components/lodash/lodash.min',
     'q': '../lib/bower_components/q/q',
-    'moment': '../lib/bower_components/moment/min/moment.min'
+    'moment': '../lib/bower_components/moment/min/moment.min',
+    'fullpage': '../lib/bower_components/fullpage.js/jquery.fullPage.min'
   },
   shim: {
     'bootstrap': ['jquery'],
@@ -17,6 +18,6 @@ requirejs.config({
   }
 });
 
-requirejs(["dependencies", "get-deck", "start-game", "get-card", "draw-card"], function(dependencies, getDeck, startGame, getCard, drawCard) {
-
+requirejs(["jquery", "fullpage", "dependencies", "get-deck", "start-game", "get-card", "draw-card", "scroll-to-draw"], function($, fullpage, dependencies, getDeck, startGame, getCard, drawCard, scrollDraw) {
+  
 });

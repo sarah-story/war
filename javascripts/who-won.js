@@ -13,8 +13,12 @@ define(function(require) {
 
     if (card1 > card2) {
       keepScore.scoreOneAdd();
+      return 1;
     } else if (card2 > card1) {
       keepScore.scoreTwoAdd();
+      return 2;
+    } else {
+      return 3;
     }
   };
 });

@@ -21,6 +21,7 @@
     "lodash": "~3.10.1",
     "require-handlebars-plugin": "~0.11.3",
     "q": "~1.0.1",
-    "moment": "~2.10.6"
+    "moment": "~2.10.6",
+    "fullpage.js": "~2.6.9"
   }
 }
