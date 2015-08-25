@@ -1,23 +1,47 @@
 body {
   display: none;
-  background: #2C3E50;
+  background: url(../bgTop.jpg);
   color: white;
+}
+
+.start {
+  color: #41C3AC; 
+}
+
+#war {
+  font-family: 'Lobster', cursive;
+  font-size: 5em;
+}
+
+#winningPlayer {
+  font-family: 'Lobster', cursive;
+  font-size: 3em;
+}
+
+#shuffling {
+  font-family: 'Lobster', cursive;
+  font-size: 5em;
 }
 
 .cardOne {
   float: left;
+  font-family: 'Lobster', cursive;
   display: inline-block;
   text-align: center;
-  font-size: 2em;
-  font-weight: bold;
+  font-size: 3em;
 }
 
 .cardTwo {
   float: right;
+  font-family: 'Lobster', cursive;
   display: inline-block;
   text-align: center;
+  font-size: 3em;
+}
+
+.whoWon {
+  font-family: 'Lobster', cursive;
   font-size: 2em;
-  font-weight: bold;
 }
 
 .cardOne .oneWins, .cardTwo .twoWins {
@@ -31,7 +55,7 @@ body {
   align-items: center;
 }
 
-#newGame, .winText {
+#newGame, .winText, #winner {
   text-align: center;
   font-weight: bold;
   font-size: 3em;
@@ -40,7 +64,13 @@ body {
 #shuffling {
   text-align: center;
   font-weight: bold;
-  font-size: 3em;
+}
+
+#playAgain {
+  background: #41C3AC;
+  width: 50%;
+  font-weight: bold;
+  font-size: 1.25em;
 }
 
 $card-width: 13px;
@@ -55,7 +85,7 @@ $animation-speed: 1s;
 }
 
 .card {
-  background: #18BC9C;
+  background: #41C3AC;
   display: block;
   float: left;
   height: $card-height;

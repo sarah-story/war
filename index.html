@@ -6,15 +6,16 @@
     <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
     <link rel="stylesheet" type="text/css" href="styles/animations.css">
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <title>War</title>
   </head>
 
   <body>
   <div id="fullpage">
     <div class="section" id="newGame">
-      <p></p>
+      <p id="war">War</p>
       <p>Scroll down to start a new game!</p>
-      <span class="glyphicon glyphicon-chevron-down"></span>
+      <span class="start glyphicon glyphicon-chevron-down floating"></span>
     </div>
     <div class="section" id="shuffling">
       <p>Shuffling the Decks</p>
@@ -76,7 +77,10 @@
     <div class="section" id="50"></div>
     <div class="section" id="51"></div>
     <div class="section" id="52"></div>
-    <div class="section" id="winner"></div>
+    <div class="section" id="winner">
+      <p id="winningPlayer"></p>
+      <button class="btn btn-lg btn-danger pulse" id="playAgain">Play Again!</button>
+    </div>
   </div>
 
   </body>

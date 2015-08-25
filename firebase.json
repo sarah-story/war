@@ -1,0 +1,9 @@
+{
+  "firebase": "war-nss-sarah",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

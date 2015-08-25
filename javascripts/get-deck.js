@@ -5,7 +5,7 @@ define(function(require) {
   return function() {
     var deferred = Q.defer();
     $.ajax({
-      url: "http://deckofcardsapi.com/api/deck/new/shuffle/"
+      url: "https://deckofcardsapi.com/api/deck/new/shuffle/"
     })// XHR was successful
     .done(function(json_data) {
       // Now we can resolve the promise and send the data

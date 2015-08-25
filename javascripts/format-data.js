@@ -2,6 +2,7 @@ define(function(require) {
   var $ = require("jquery");
   var fullpage = require("fullpage");
   var whoWon = require("who-won");
+  var keepScore = require("keep-score");
 
   return function(deckOne, deckTwo) {
 
@@ -28,6 +29,14 @@ define(function(require) {
           $("#" + id).find(".whoWon").html("It's war! Draw again");
           $("#" + id).find(".oneWins").css("opacity", "0");
           $("#" + id).find(".twoWins").css("opacity", "0");
+        }
+
+        if (keepScore.getScoreOne() > keepScore.getScoreTwo()) {
+          $("#winningPlayer").html("Player 1 wins the game!");
+        } else if (keepScore.getScoreOne() < keepScore.getScoreTwo()) {
+          $("#winningPlayer").html("Player 2 wins the game!");
+        } else {
+          $("#winningPlayer").html("It's a tie!");
         }
       }
     });
