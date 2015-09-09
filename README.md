@@ -13,7 +13,7 @@ git clone https://github.com/sarah-story/war.git
 #####Install dependencies
 
 ``` 
-cd ~/war/lib
+cd ./war/lib
 bower install
 npm instal
 ```
@@ -25,6 +25,13 @@ cd ..
 python -m SimpleHTTPServer 8000
 ```
 
-The website should be running on http://localhost:800
+The website should be running on http://localhost:8000. If you make any changes, you can run grunt by:
+
+```
+cd ./lib
+grunt
+```
+
+and it will check your JavaScript and compile your SASS
 
 
